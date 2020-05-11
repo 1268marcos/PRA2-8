@@ -15,19 +15,19 @@ public class Vocabulary {
 
     @PrimaryKey(autoGenerate = true)
     @NonNull
-    @ColumnInfo(name = "museumId")
+    @ColumnInfo(name = "vocabularyId")
     private int mId;
 
     @Nullable
-    @ColumnInfo(name = "museumName")
-    private String mName;
+    @ColumnInfo(name = "vocabularyWord")
+    private String mWord;
 
-    private String mStyle;
+    private String mMeaning;
 
-    public Museum(@Nullable String name, String style, int score, String creationDate) {
-        mName = name;
-        mStyle = style;
-        mScore = score;
+    public Vocabulary(@Nullable String word, String meaning, int level, String creationDate) {
+        mWord = word;
+        mMeaning = meaning;
+        mLevel = level;
         mCreationDate = creationDate;
     }
 
@@ -39,28 +39,28 @@ public class Vocabulary {
         mId = id;
     }
 
-    public String getName() {
-        return mName;
+    public String getWord() {
+        return mWord;
     }
 
-    public void setName(String name) {
-        mName = name;
+    public void setWord(String word) {
+        mWord = word;
     }
 
-    public String getStyle() {
-        return mStyle;
+    public String getMeaning() {
+        return mMeaning;
     }
 
-    public void setStyle(String style) {
-        mStyle = style;
+    public void setMeaning(String meaning) {
+        mMeaning = meaning;
     }
 
-    public int getScore() {
-        return mScore;
+    public int getLevel() {
+        return mLevel;
     }
 
-    public void setScore(int score) {
-        mScore = score;
+    public void setLevel(int level) {
+        mLevel = level;
     }
 
     public String getCreationDate() {
@@ -71,7 +71,7 @@ public class Vocabulary {
         mCreationDate = creationDate;
     }
 
-    private int mScore;
+    private int mLevel;
     private String mCreationDate;
 
 }
